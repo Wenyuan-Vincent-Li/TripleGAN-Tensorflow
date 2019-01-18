@@ -67,6 +67,7 @@ def main():
     if args is None:
       exit()
 
+    os.environ["CUDA_VISIBLE_DEVICES"] = "3"
     # open session
     with tf.Session(config=tf.ConfigProto(allow_soft_placement=True)) as sess:
         gan = TripleGAN(sess, epoch=args.epoch, batch_size=args.batch_size, unlabel_batch_size=args.unlabel_batch_size,
