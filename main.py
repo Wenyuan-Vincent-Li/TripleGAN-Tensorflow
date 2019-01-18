@@ -5,6 +5,7 @@ from utils import check_folder
 
 import tensorflow as tf
 import argparse
+import os
 
 """parsing and configuration"""
 def parse_args():
